@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 import { NOME_SITE, URL_SITE } from "@/lib/constantes";
 
@@ -14,6 +15,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className="h-full antialiased">
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1591818381604581"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <header className="border-b border-slate-200 bg-white">
           <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-4 px-4 py-3">
             <Link
